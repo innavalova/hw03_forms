@@ -31,11 +31,11 @@ class Post(models.Model):
         blank=True,
         null=True,
         verbose_name='Группа',
-        help_text='Пост будет размещён в этой группе'
+        help_text='Выберите группу'
     )
 
     class Meta:
         ordering = ['-pub_date']
 
     def __str__(self):
-        return self.text
+        return self.text[:15]
